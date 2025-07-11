@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #0b1d3a 0%, #152a4d 100%);
@@ -9,6 +10,7 @@ body {
   margin: 0;
 }
 
+/* כותרת ראשית */
 h1 {
   font-size: 3rem;
   color: #f97316; /* כתום חם */
@@ -21,42 +23,19 @@ h1 {
   text-shadow: 1.5px 1.5px 4px rgba(0,0,0,0.7);
 }
 
-a {
-  display: inline-block;
-  margin: 20px 0 50px;
-  padding: 14px 40px;
-  background-color: #f97316; /* כתום חם */
-  color: #0b1d3a;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 1.15rem;
-  box-shadow: 0 6px 20px rgba(249,115,22,0.7);
-  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
-  max-width: 900px;
-  text-align: center;
-  cursor: pointer;
-}
-
-a:hover {
-  background-color: #d35400; /* כתום כהה יותר */
-  transform: scale(1.05);
-  color: #fff;
-}
-
+/* כותרת משנית */
 h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: #a5b4fc; /* תכלת-סגלגל */
-  border-bottom: 4px solid #f97316; /* כתום חם */
+  display: table; /* כמו inline-block, אבל נותן שליטה מושלמת */
+  margin: 30px auto 40px auto;
   padding-bottom: 10px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
+  border-bottom: 4px solid #f97316;
+  color: #a5b4fc;
   text-shadow: 0 0 5px rgba(0,0,0,0.3);
+  font-size: 2.2rem;
 }
 
+
+/* רשימה */
 ul {
   list-style: none;
   padding-left: 0;
@@ -79,30 +58,7 @@ ul li:hover {
   color: #f97316; /* כתום חם */
 }
 
-p {
-  max-width: 900px;
-  margin: 0 auto 50px auto;
-  font-size: 1.18rem;
-  line-height: 1.7;
-  background: #1f2937; /* אפור כהה */
-  padding: 25px 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(249,115,22,0.15);
-  text-align: left;
-  color: #d1d5db;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-p b {
-  display: block;
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-  color: #f97316; /* כתום חם */
-  font-weight: 800;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
+/* גלריית תמונות */
 .gallery {
   display: flex;
   justify-content: center;
@@ -114,17 +70,19 @@ p b {
   margin-right: auto;
 }
 
+/* פריטי הגלריה */
 .item {
   display: flex;
-  flex-direction: column; /* מבטיח שהטקסט יהיה מתחת לתמונה */
+  flex-direction: column; /* טקסט מתחת לתמונה */
   align-items: center;
-  width: 300px; /* רוחב אחיד */
+  width: 300px;
 }
 
+/* תמונות */
 .item img {
-  width: 100%; /* תמלא את רוחב הקונטיינר */
-  height: auto; /* יחס פרופורציות נשמר */
-  max-height: 200px; /* לא תהיה גבוהה מדי */
+  width: 100%;
+  height: auto;
+  max-height: 200px;
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 15px 45px rgba(249,115,22,0.5);
@@ -140,6 +98,7 @@ p b {
   z-index: 10;
 }
 
+/* טקסט מתחת לתמונה */
 .item p {
   font-weight: 800;
   font-size: 1.4rem;
@@ -148,4 +107,53 @@ p b {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
   text-align: center;
   user-select: none;
+}
+
+/* פסקאות מידע */
+p {
+  max-width: 900px;
+  margin: 40px auto 50px auto; /* עם רווח עליון ליותר אוויר */
+  font-size: 1.18rem;
+  line-height: 1.7;
+  background: #1f2937; /* אפור כהה */
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(249,115,22,0.15);
+  text-align: left;
+  color: #d1d5db;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* כותרות בפסקאות */
+p b {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #f97316; /* כתום חם */
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* הקישור (כפתור) */
+a {
+  display: inline-block;
+  margin: 20px 0 50px;
+  padding: 14px 40px;
+  background-color: #f97316; /* כתום חם */
+  color: #0b1d3a;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: 0 6px 20px rgba(249,115,22,0.7);
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  max-width: 900px;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: #d35400; /* כתום כהה יותר */
+  transform: scale(1.05);
+  color: #fff;
 }
