@@ -1,0 +1,151 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0b1d3a 0%, #152a4d 100%);
+  color: #d1d5db;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #f97316; /* כתום חם */
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap;
+  text-shadow: 1.5px 1.5px 4px rgba(0,0,0,0.7);
+}
+
+a {
+  display: inline-block;
+  margin: 20px 0 50px;
+  padding: 14px 40px;
+  background-color: #f97316; /* כתום חם */
+  color: #0b1d3a;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: 0 6px 20px rgba(249,115,22,0.7);
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  max-width: 900px;
+  text-align: center;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: #d35400; /* כתום כהה יותר */
+  transform: scale(1.05);
+  color: #fff;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #a5b4fc; /* תכלת-סגלגל */
+  border-bottom: 4px solid #f97316; /* כתום חם */
+  padding-bottom: 10px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  font-weight: 700;
+  color: #a5b4fc; /* תכלת-סגלגל */
+  font-size: 1.3rem;
+}
+
+ul li {
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+ul li:hover {
+  color: #f97316; /* כתום חם */
+}
+
+p {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  font-size: 1.18rem;
+  line-height: 1.7;
+  background: #1f2937; /* אפור כהה */
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(249,115,22,0.15);
+  text-align: left;
+  color: #d1d5db;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+p b {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #f97316; /* כתום חם */
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column; /* מבטיח שהטקסט יהיה מתחת לתמונה */
+  align-items: center;
+  width: 300px; /* רוחב אחיד */
+}
+
+.item img {
+  width: 100%; /* תמלא את רוחב הקונטיינר */
+  height: auto; /* יחס פרופורציות נשמר */
+  max-height: 200px; /* לא תהיה גבוהה מדי */
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 45px rgba(249,115,22,0.5);
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  border: 5px solid transparent;
+}
+
+.item img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 25px 75px rgba(211,84,0,0.8);
+  border-color: #d35400;
+  z-index: 10;
+}
+
+.item p {
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-top: 12px;
+  color: #f97316; /* כתום חם */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-align: center;
+  user-select: none;
+}
